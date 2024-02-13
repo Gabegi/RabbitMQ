@@ -17,6 +17,7 @@ namespace RabbitMQBankingApplication.Handler
             _rabbitMqBus = rabbitMqBus;
         }
 
+
         public async Task Handle(MoneyTransferCommandDto request, CancellationToken cancellationToken)
         {
             var moneyTransferCommand = _mapper.Map<MoneyTransferCommand>(request);
